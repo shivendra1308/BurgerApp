@@ -107,7 +107,7 @@ class BurgerBuilder extends Component {
             },
             deliveryMethod: 'fastest'
         }
-        axios.post( '/orders.json', order )
+        axios.post( 'https://react-burger-c83a1.firebaseio.com/orders.json', order )
             .then( response => {
                 this.setState( { loading: false, purchasing: false } );
             } )
